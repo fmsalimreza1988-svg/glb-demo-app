@@ -32,7 +32,7 @@ export default function CADParallaxSection() {
   return (
     <div
       ref={sectionRef}
-      className="min-h-screen relative flex items-center justify-center overflow-hidden bg-black"
+      className="relative bg-black overflow-hidden"
     >
       <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 via-cyan-500/5 to-black" />
 
@@ -44,9 +44,9 @@ export default function CADParallaxSection() {
         />
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto w-full px-6">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
-          <div className="space-y-6">
+      <div className="relative z-10">
+        <div className="max-w-7xl mx-auto px-6 py-20">
+          <div className="space-y-6 max-w-2xl">
             <div className="glass-card px-4 py-2 rounded-full inline-block backdrop-blur-xl">
               <span className="text-blue-400 font-bold text-sm tracking-wider flex items-center gap-2">
                 <Ruler className="w-4 h-4" />
@@ -98,106 +98,108 @@ export default function CADParallaxSection() {
               </div>
             </div>
           </div>
+        </div>
 
-          <div className="relative aspect-square w-full max-w-2xl mx-auto">
+        <div className="relative w-full h-96 md:h-[600px]">
+          <div
+            className="absolute inset-0 transition-opacity duration-500"
+            style={{ opacity: imageOpacity }}
+          >
             <div
-              className="absolute inset-0 transition-opacity duration-500"
-              style={{ opacity: imageOpacity }}
+              className="w-full h-full overflow-hidden"
+              style={{
+                transform: `scale(${imageScale})`,
+                transition: 'transform 0.1s linear'
+              }}
             >
-              <div
-                className="glass-card w-full h-full rounded-3xl overflow-hidden backdrop-blur-2xl shadow-2xl"
-                style={{
-                  transform: `scale(${imageScale})`,
-                  transition: 'transform 0.1s linear'
-                }}
-              >
-                <div className="relative w-full h-full bg-gradient-to-br from-blue-500/20 to-cyan-500/20">
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <svg
-                      className="w-3/4 h-3/4"
-                      viewBox="0 0 400 400"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <rect x="50" y="50" width="300" height="300" stroke="rgba(34, 211, 238, 0.6)" strokeWidth="2" fill="none" />
-                      <rect x="80" y="80" width="240" height="240" stroke="rgba(34, 211, 238, 0.4)" strokeWidth="1" fill="none" />
+              <div className="relative w-full h-full bg-gradient-to-br from-blue-500/20 to-cyan-500/20">
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <svg
+                    className="w-full h-full max-w-2xl max-h-96"
+                    viewBox="0 0 400 400"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <rect x="50" y="50" width="300" height="300" stroke="rgba(34, 211, 238, 0.6)" strokeWidth="2" fill="none" />
+                    <rect x="80" y="80" width="240" height="240" stroke="rgba(34, 211, 238, 0.4)" strokeWidth="1" fill="none" />
 
-                      <line x1="50" y1="100" x2="350" y2="100" stroke="rgba(34, 211, 238, 0.3)" strokeWidth="1" strokeDasharray="5,5" />
-                      <line x1="50" y1="150" x2="350" y2="150" stroke="rgba(34, 211, 238, 0.3)" strokeWidth="1" strokeDasharray="5,5" />
-                      <line x1="50" y1="200" x2="350" y2="200" stroke="rgba(34, 211, 238, 0.3)" strokeWidth="1" strokeDasharray="5,5" />
-                      <line x1="50" y1="250" x2="350" y2="250" stroke="rgba(34, 211, 238, 0.3)" strokeWidth="1" strokeDasharray="5,5" />
-                      <line x1="50" y1="300" x2="350" y2="300" stroke="rgba(34, 211, 238, 0.3)" strokeWidth="1" strokeDasharray="5,5" />
+                    <line x1="50" y1="100" x2="350" y2="100" stroke="rgba(34, 211, 238, 0.3)" strokeWidth="1" strokeDasharray="5,5" />
+                    <line x1="50" y1="150" x2="350" y2="150" stroke="rgba(34, 211, 238, 0.3)" strokeWidth="1" strokeDasharray="5,5" />
+                    <line x1="50" y1="200" x2="350" y2="200" stroke="rgba(34, 211, 238, 0.3)" strokeWidth="1" strokeDasharray="5,5" />
+                    <line x1="50" y1="250" x2="350" y2="250" stroke="rgba(34, 211, 238, 0.3)" strokeWidth="1" strokeDasharray="5,5" />
+                    <line x1="50" y1="300" x2="350" y2="300" stroke="rgba(34, 211, 238, 0.3)" strokeWidth="1" strokeDasharray="5,5" />
 
-                      <line x1="100" y1="50" x2="100" y2="350" stroke="rgba(34, 211, 238, 0.3)" strokeWidth="1" strokeDasharray="5,5" />
-                      <line x1="150" y1="50" x2="150" y2="350" stroke="rgba(34, 211, 238, 0.3)" strokeWidth="1" strokeDasharray="5,5" />
-                      <line x1="200" y1="50" x2="200" y2="350" stroke="rgba(34, 211, 238, 0.3)" strokeWidth="1" strokeDasharray="5,5" />
-                      <line x1="250" y1="50" x2="250" y2="350" stroke="rgba(34, 211, 238, 0.3)" strokeWidth="1" strokeDasharray="5,5" />
-                      <line x1="300" y1="50" x2="300" y2="350" stroke="rgba(34, 211, 238, 0.3)" strokeWidth="1" strokeDasharray="5,5" />
+                    <line x1="100" y1="50" x2="100" y2="350" stroke="rgba(34, 211, 238, 0.3)" strokeWidth="1" strokeDasharray="5,5" />
+                    <line x1="150" y1="50" x2="150" y2="350" stroke="rgba(34, 211, 238, 0.3)" strokeWidth="1" strokeDasharray="5,5" />
+                    <line x1="200" y1="50" x2="200" y2="350" stroke="rgba(34, 211, 238, 0.3)" strokeWidth="1" strokeDasharray="5,5" />
+                    <line x1="250" y1="50" x2="250" y2="350" stroke="rgba(34, 211, 238, 0.3)" strokeWidth="1" strokeDasharray="5,5" />
+                    <line x1="300" y1="50" x2="300" y2="350" stroke="rgba(34, 211, 238, 0.3)" strokeWidth="1" strokeDasharray="5,5" />
 
-                      <rect x="120" y="180" width="60" height="80" stroke="rgba(34, 211, 238, 0.8)" strokeWidth="2" fill="rgba(34, 211, 238, 0.1)" />
-                      <rect x="220" y="180" width="60" height="80" stroke="rgba(34, 211, 238, 0.8)" strokeWidth="2" fill="rgba(34, 211, 238, 0.1)" />
+                    <rect x="120" y="180" width="60" height="80" stroke="rgba(34, 211, 238, 0.8)" strokeWidth="2" fill="rgba(34, 211, 238, 0.1)" />
+                    <rect x="220" y="180" width="60" height="80" stroke="rgba(34, 211, 238, 0.8)" strokeWidth="2" fill="rgba(34, 211, 238, 0.1)" />
 
-                      <rect x="120" y="120" width="160" height="40" stroke="rgba(34, 211, 238, 0.8)" strokeWidth="2" fill="rgba(34, 211, 238, 0.15)" />
+                    <rect x="120" y="120" width="160" height="40" stroke="rgba(34, 211, 238, 0.8)" strokeWidth="2" fill="rgba(34, 211, 238, 0.15)" />
 
-                      <circle cx="200" cy="200" r="5" fill="rgba(34, 211, 238, 1)" />
+                    <circle cx="200" cy="200" r="5" fill="rgba(34, 211, 238, 1)" />
 
-                      <text x="200" y="30" fill="rgba(34, 211, 238, 0.8)" fontSize="14" textAnchor="middle" fontFamily="monospace">
-                        ARCHITECTURAL PLAN
-                      </text>
-                      <text x="200" y="380" fill="rgba(34, 211, 238, 0.6)" fontSize="10" textAnchor="middle" fontFamily="monospace">
-                        SCALE 1:100
-                      </text>
-                    </svg>
-                  </div>
-
-                  <div className="absolute top-4 left-4 glass-card px-3 py-1 rounded-lg backdrop-blur-xl">
-                    <span className="text-xs text-cyan-400 font-mono">CAD DRAWING</span>
-                  </div>
-
-                  <div className="absolute bottom-4 right-4 glass-card px-3 py-1 rounded-lg backdrop-blur-xl">
-                    <span className="text-xs text-gray-300 font-mono">2D PLAN</span>
-                  </div>
+                    <text x="200" y="30" fill="rgba(34, 211, 238, 0.8)" fontSize="14" textAnchor="middle" fontFamily="monospace">
+                      ARCHITECTURAL PLAN
+                    </text>
+                    <text x="200" y="380" fill="rgba(34, 211, 238, 0.6)" fontSize="10" textAnchor="middle" fontFamily="monospace">
+                      SCALE 1:100
+                    </text>
+                  </svg>
                 </div>
-              </div>
-            </div>
-
-            <div
-              className="absolute inset-0 transition-opacity duration-500"
-              style={{ opacity: modelOpacity }}
-            >
-              <div className="glass-card w-full h-full rounded-3xl overflow-hidden backdrop-blur-2xl shadow-2xl">
-                <iframe
-                  title="Bali Villa - Roman Villa Influence"
-                  className="w-full h-full"
-                  frameBorder="0"
-                  allowFullScreen
-                  allow="autoplay; fullscreen; xr-spatial-tracking"
-                  src="https://sketchfab.com/models/b3583f43555c49ae9f46489332dd77bb/embed?autostart=1&ui_theme=dark&dnt=1"
-                />
 
                 <div className="absolute top-4 left-4 glass-card px-3 py-1 rounded-lg backdrop-blur-xl">
-                  <span className="text-xs text-emerald-400 font-mono">3D MODEL</span>
+                  <span className="text-xs text-cyan-400 font-mono">CAD DRAWING</span>
                 </div>
 
                 <div className="absolute bottom-4 right-4 glass-card px-3 py-1 rounded-lg backdrop-blur-xl">
-                  <span className="text-xs text-gray-300 font-mono">INTERACTIVE</span>
+                  <span className="text-xs text-gray-300 font-mono">2D PLAN</span>
                 </div>
               </div>
             </div>
-
-            <div
-              className="absolute -inset-4 bg-gradient-to-r from-blue-500/20 to-cyan-500/20 rounded-3xl blur-2xl -z-10 transition-opacity duration-500"
-              style={{ opacity: modelOpacity * 0.5 }}
-            />
           </div>
+
+          <div
+            className="absolute inset-0 transition-opacity duration-500"
+            style={{ opacity: modelOpacity }}
+          >
+            <div className="w-full h-full overflow-hidden">
+              <iframe
+                title="Bali Villa - Roman Villa Influence"
+                className="w-full h-full"
+                frameBorder="0"
+                allowFullScreen
+                allow="autoplay; fullscreen; xr-spatial-tracking"
+                src="https://sketchfab.com/models/b3583f43555c49ae9f46489332dd77bb/embed?autostart=1&ui_theme=dark&dnt=1"
+              />
+
+              <div className="absolute top-4 left-4 glass-card px-3 py-1 rounded-lg backdrop-blur-xl">
+                <span className="text-xs text-emerald-400 font-mono">3D MODEL</span>
+              </div>
+
+              <div className="absolute bottom-4 right-4 glass-card px-3 py-1 rounded-lg backdrop-blur-xl">
+                <span className="text-xs text-gray-300 font-mono">INTERACTIVE</span>
+              </div>
+            </div>
+          </div>
+
+          <div
+            className="absolute -inset-4 bg-gradient-to-r from-blue-500/20 to-cyan-500/20 blur-2xl -z-10 transition-opacity duration-500"
+            style={{ opacity: modelOpacity * 0.5 }}
+          />
         </div>
       </div>
 
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 glass-card px-4 py-2 rounded-full backdrop-blur-xl">
-        <p className="text-sm text-gray-300 flex items-center gap-2">
-          <span className="w-2 h-2 bg-cyan-400 rounded-full animate-pulse" />
-          Scroll to transform
-        </p>
+      <div className="relative z-20 flex justify-center py-12">
+        <div className="glass-card px-4 py-2 rounded-full backdrop-blur-xl">
+          <p className="text-sm text-gray-300 flex items-center gap-2">
+            <span className="w-2 h-2 bg-cyan-400 rounded-full animate-pulse" />
+            Scroll to transform
+          </p>
+        </div>
       </div>
     </div>
   );
