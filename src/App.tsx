@@ -1,5 +1,6 @@
 import { useRef } from 'react';
 import Hero from './components/Hero';
+import CADParallaxSection from './components/CADParallaxSection';
 import Section from './components/Section';
 import CustomCursor from './components/CustomCursor';
 import { useScrollProgress } from './hooks/useScrollProgress';
@@ -79,6 +80,7 @@ function App() {
     <div ref={containerRef} className="bg-black">
       <CustomCursor />
       <Hero />
+      <CADParallaxSection />
 
       {sections.map((section, index) => (
         <Section
